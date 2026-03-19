@@ -401,3 +401,11 @@ h1[dangerouslySetInnerHTML] * {
     display: block !important;
     font-size: 2rem !important; /* डिटेल पेज पर और भी बड़ा */
 }
+
+/* न्यूज़ डिटेल पेज के अंदर के कंटेंट को पूरा दिखाने के लिए */
+.article-content, .article-content p {
+    display: block !important; /* फ्लेक्स/वेबकिट-बॉक्स हटा देगा */
+    -webkit-line-clamp: unset !important; /* लाइन लिमिट हटा देगा */
+    overflow: visible !important; /* कंटेंट को दिखने देगा */
+    height: auto !important;
+}
