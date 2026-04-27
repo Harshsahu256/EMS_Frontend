@@ -1322,7 +1322,12 @@ const RashifalDetailsPage = () => {
                         </div>
                       )}
                       <div className="news-content-area">
-                        <h6 className="fw-bold mb-1">{news.title_hi || news.title_en}</h6>
+                        {/* <h6 className="fw-bold mb-1">{news.title_hi || news.title_en}</h6> */}
+        <div 
+                    // className="fw-bold mb-1"
+                        className="news-headline-master mb-1"
+                    dangerouslySetInnerHTML={{ __html: news?.title_hi || news?.title_en }} 
+                  />
                         <p className="small text-muted">{(news.summary_hi || "").slice(0, 60)}...</p>
                       </div>
                     </div>

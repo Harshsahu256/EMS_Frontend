@@ -302,10 +302,23 @@ const Header = () => {
       <div className="bg-white border-bottom sticky-top" style={{ zIndex: 1020 }}>
         <Container fluid className="d-flex justify-content-between align-items-center py-2 px-3">
           {/* LOGO FIXED HERE - No more translateY animation */}
-          <Link to="/" className="d-flex flex-column align-items-center text-decoration-none">
+          {/* <Link to="/" className="d-flex flex-column align-items-center text-decoration-none">
             <video src="/logogif.mp4" autoPlay loop muted style={{ width: "60px", marginBottom: "2px" }} />
             <img src={logoT} alt="EMS Tagline" style={{ height: "5px" }} />
-          </Link>
+          
+          <Link to="/" className="d-flex flex-column align-items-center text-decoration-none">
+  <video 
+    src="/logogif.mp4" 
+    autoPlay 
+    loop 
+    muted 
+    playsInline             // ✅ Ye iPhone par automatic play (autoplay) karega
+    webkit-playsinline="true" // ✅ Purane Safari browsers ke liye fix
+    preload="auto"          // ✅ Page load hote hi video load kar lega
+    style={{ width: "60px", marginBottom: "2px" }} 
+  />
+  <img src={logoT} alt="EMS Tagline" style={{ height: "5px" }} />
+</Link>
  
           {/* Center Menu */}
           <Nav className="flex-grow-1 d-none d-md-flex justify-content-center align-items-center fw-bold" style={{ gap: "45px" }}>

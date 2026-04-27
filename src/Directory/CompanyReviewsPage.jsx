@@ -13,6 +13,8 @@ const MOCK_CURRENT_USER = {
   email: "current.user@example.com"
 };
 
+
+
 const CompanyReviewsPage = ({ companyId }) => {
   const [reviews, setReviews] = useState([]);
   const [averageRating, setAverageRating] = useState(0);

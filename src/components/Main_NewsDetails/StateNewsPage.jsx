@@ -987,7 +987,12 @@ const StateNewsPage = () => {
                 <Row className="g-3 align-items-start">
                   {/* Text Section */}
                   <Col xs={12} md={8}>
-                    <h5 className="fw-bold mb-1">{article.title_hi}</h5>
+                   <div 
+                    // className="fw-bold mb-1"
+                        className="news-headline-master mb-1"
+                    dangerouslySetInnerHTML={{ __html: article?.title_hi || article?.title_en }} 
+                  />
+                    {/* <h5 className="fw-bold mb-1">{article.title_hi}</h5> */}
                     <p className="text-muted mb-2">
                       {article.summary_hi?.length > 150
                         ? article.summary_hi.substring(0, 147) + "..."

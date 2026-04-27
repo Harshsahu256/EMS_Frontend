@@ -426,12 +426,18 @@ const BusinessListPage = () => {
               sm={9}
               className="d-flex flex-column justify-content-center"
             >
-              <h6
+              {/* <h6
                 className="fw-bold mb-1 title-clamp-2-lines"
                 style={{ fontSize: "0.95rem" }}
               >
                 {article.title_hi || article.title_en}
-              </h6>
+              </h6> */}
+
+               <div 
+                    // className="fw-bold mb-1"
+                        className="news-headline-master mb-1"
+                    dangerouslySetInnerHTML={{ __html: article?.title_hi || article?.title_en }} 
+                  />
 
               <p
                 className="mb-1 text-muted d-none d-sm-block"
